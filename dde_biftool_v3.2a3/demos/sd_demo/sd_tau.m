@@ -1,0 +1,29 @@
+%% User-provided state-dependent delays
+% Implementation for tutorial sd_demo:
+%
+%   function dtau=sd_tau(k,xx,par)
+%
+% returns delay $\tau_k$, depending on |xx(:,1:k)|
+% ($[x(t),\ldots,x(t-\tau_{k-1})]$) and |par|.
+%
+% (c) DDE-Biftool v3.2a3 2019-09-14 (76060b1c6081bc0c98a69a8b0829d26a658fc9d6)
+
+%
+%%
+function tau=sd_tau(k,xx,par)
+pad=zeros(1,size(xx,3));
+if k==1
+    tau=par(10)+pad;
+elseif k==2
+    tau=par(11)+pad;
+elseif k==3
+    tau=2+par(5)*par(10)*xx(2,1,:).*xx(2,2,:);
+elseif k==4
+    tau=1-1./(1+xx(2,3,:).*xx(1,1,:));
+elseif k==5
+    tau=xx(4,1,:);
+elseif k==6
+    tau=xx(5,1,:);
+end
+end
+

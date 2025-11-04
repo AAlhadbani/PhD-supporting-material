@@ -1,0 +1,10 @@
+function cusp=p_tocusp(point)
+%% convert fold point to point of type cusp
+%
+% (c) DDE-Biftool v3.2a3 2019-09-14 (76060b1c6081bc0c98a69a8b0829d26a658fc9d6)
+
+%%
+cusp=point;
+cusp.kind='cusp';
+
+end
