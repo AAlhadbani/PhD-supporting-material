@@ -1,5 +1,5 @@
 clear
-ddebiftool_path(['C:\Users\aa1366\OneDrive - University of Exeter\Desktop\year4\matlab\dde_biftool_v3.2a3']);
+ddebiftool_path([pwd(),'/dde_biftool_v3.2a3']);
 format compact
 c=0.9;
 d=acos(1-c^2/2);
