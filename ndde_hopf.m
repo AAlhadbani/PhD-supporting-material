@@ -49,15 +49,6 @@ Ahopf=funcs.drhs_mf(xxh,parh,{1,'I'},0);
 hopfdelays=dde_taufunvec(funcs,xxh,parh).';
 assert(norm(A-Ahopf,'fro')<1e-12)
 assert(norm(eqdelays-hopfdelays)<1e-12)
-%% numerically calculate all eigenvalues
-%stab=dde_stst_eig_cheb(A,eqdelays,'lhs_matrix',M,'min_number_of_eigenvalues',50,'maxsize',1000);
-%ev=stab.l0;
-%asy=log(c)/(eqdelays(3));
-%figure(1);clf;ax=gca;
-%plot(real(ev),imag(ev),'ko');
-%grid on
-%xline(asy)
-%ax.XLim(1)=asy*1.2;
 %% %% numerically calculate all eigenvalues
 stab=dde_stst_eig_cheb(A,eqdelays,'lhs_matrix',M,...
     'min_number_of_eigenvalues',100,'max_number_of_eigenvalues',200)
