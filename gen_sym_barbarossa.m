@@ -9,7 +9,7 @@
 % where $\tau,b,c$ are parameter.
 %%
 clear
-ddebiftool_path(fullfile('ddebiftool_snapshot/'),'symbolic');
+ddebiftool_path(fullfile('dde_biftool_v3.2a3'),'symbolic');
 %% Set number of delays and parameter names
 parnames={'a1','a2','kappa1','kappa2','gam','delta','tau1','tau2','T','mu0'};
 cind=[parnames;num2cell(1:length(parnames))];

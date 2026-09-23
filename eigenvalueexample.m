@@ -1,5 +1,5 @@
 clear
-ddebiftool_path([pwd(),'/dde_biftool_v3.2a3']);
+ddebiftool_path(fullfile('ddebiftool_snapshot/'));
 format compact
 c=0.9;
 d=acos(1-c^2/2);
